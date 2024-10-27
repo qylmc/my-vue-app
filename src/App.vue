@@ -10,7 +10,7 @@ export default {
   name: 'App',
   data() {
     return {
-      message: 'Welcome to Your Vue.js App'
+      message: '这是实验二的效果图'
     }
   },
   methods: {
