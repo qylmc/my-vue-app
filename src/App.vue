@@ -1,20 +1,29 @@
 <template>
   <div id="app">
-    <h1>这是实验二的网站效果</h1>
+    <h1>{{ message }}</h1>
+    <button @click="reverseMessage">Reverse Message</button>
   </div>
 </template>
 
-<script setup>
-// JavaScript 代码可以写在这里
+<script>
+export default {
+  name: 'App',
+  data() {
+    return {
+      message: 'Welcome to Your Vue.js App'
+    }
+  },
+  methods: {
+    reverseMessage() {
+      this.message = this.message.split('').reverse().join('');
+    }
+  }
+}
 </script>
 
 <style>
 #app {
   text-align: center;
-  padding: 50px;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-}
-h1 {
-  color: #42b983;
+  margin-top: 60px;
 }
 </style>
